@@ -1,9 +1,9 @@
-import {Modal} from "./components/Modal/Modal.tsx";
+import {Cart} from "./components/Cart/Cart.tsx";
 
 function App() {
     return (
         <div>
-            <Modal open={true}/>
+            <Cart/>
         </div>
     )
 }
