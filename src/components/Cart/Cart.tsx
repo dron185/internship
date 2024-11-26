@@ -10,7 +10,14 @@ export const Cart = () => {
             {showModal && <Modal
                 open={showModal}
                 onClose={() => setShowModal(false)}
-            ></Modal>}
+                modalTitle={'Cart'}
+            >
+                <ul>
+                    <li>1 товар</li>
+                    <li>2 товар</li>
+                    <li>3 товар</li>
+                </ul>
+            </Modal>}
         </>
     )
 }
