@@ -1,0 +1,16 @@
+.container {
+    margin: 100px 0 0 50px;
+}
+
+.postContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*button {*/
+/*    border: 1px solid black;*/
+/*    border-radius: 2px;*/
+/*    padding: 2px 7px;*/
+/*    !*line-height: 1;*!*/
+/*}*/

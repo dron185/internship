@@ -4,11 +4,11 @@
 @import "@radix-ui/colors/violet.css";
 
 /* reset */
-button,
-fieldset,
-input {
-    all: unset;
-}
+/*button,*/
+/*fieldset,*/
+/*input {*/
+/*    all: unset;*/
+/*}*/
 
 .DialogOverlay {
     background-color: var(--black-a9);
