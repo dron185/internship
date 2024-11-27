@@ -3,7 +3,7 @@ import {DeletePostModal} from "../Modal/DeletePostModal/DeletePostModal.tsx";
 import s from './Posts.module.css'
 
 export const Posts = () => {
-    const [posts, setPosts] = useState([
+    const [posts] = useState([
         { id: 1, title: 'Post 1' },
         { id: 2, title: 'Post 2' },
         { id: 3, title: 'Post 3' },
