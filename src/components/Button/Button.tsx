@@ -4,10 +4,13 @@ import clsx from "clsx";
 import {Slot} from "@radix-ui/react-slot";
 
 type Props = {
+    /** Choose from 3 style variants. Default: 'primary'. */
     variant?: 'primary' | 'secondary' | 'outlined'
+    /** Render the Button using any element if asChild true */
     asChild?: boolean
 } & ComponentPropsWithoutRef<'button'>
 
+/** Ui kit Button component */
 export const Button = ({ variant = 'primary', className, asChild,  ...rest }: Props) => {
 
     const Component = asChild ? Slot : 'button'
