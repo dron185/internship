@@ -1,4 +1,4 @@
-import {ModalRadix} from "../ModalRadix.tsx";
+import {ModalRadix} from "../ModalRadix/ModalRadix.tsx";
 import {Button} from "../../Button/Button.tsx";
 
 type Props = {
