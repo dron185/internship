@@ -1,0 +1,94 @@
+.form {
+    margin-top: 30px;
+}
+
+.Root {
+    all: unset;
+    box-sizing: var(--box-sizing, border-box);
+    border: 2px solid #edf3fa;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #4C4C4C;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        z-index: -1;
+    }
+
+    &:active {
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        &::before {
+            background-color: #333333;
+            opacity: 1;
+        }
+    }
+
+    &:focus {
+        &::before {
+            background-color: #171717;
+            opacity: 1;
+        }
+    }
+
+    &:disabled {
+        border: 2px solid #8D9094;
+        &:hover::before {
+            opacity: 0;
+        }
+    }
+}
+
+.Indicator {
+    width: 18px;
+    height: 18px;
+    --box-sizing: content-box;
+}
+
+
+.Label {
+    color: #ffffff;
+    padding-left: 11px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
+.LabelDisabled {
+    color: #8D9094;
+}
+
+.disabled path {
+    fill: #4C4C4C;
+}
+
+.disabled rect {
+    fill: #D5DAE0;
+}
+
+
+.default path {
+    fill: #ffffff;
+}
+
+.default rect {
+    fill: #000000;
+}
+

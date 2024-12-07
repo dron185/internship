@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { ModalRadix } from "./ModalRadix"
+import { ModalRadix } from "./ModalRadix.tsx"
 import { useState } from "react"
-import { Button } from "../../Button/Button.tsx"
+import { Button } from "../Button/Button.tsx"
 
 const meta = {
   component: ModalRadix,
