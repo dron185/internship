@@ -1,6 +1,10 @@
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import styles from "./RadioGroupRadix.module.css";
-import { Option } from "../../App.tsx"
+
+export type Option = {
+  value: string;
+  label: string;
+};
 
 type Props = {
   disabled?: boolean

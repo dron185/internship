@@ -2,12 +2,9 @@ import { Header } from "./components/Header/Header.tsx"
 import { Posts } from "./components/Posts/Posts.tsx"
 import { CheckboxRadix } from "./components/CheckboxRadix/CheckboxRadix.tsx"
 import s from './App.module.css'
-import { RadioGroupRadix } from "./components/RadioGroupRadix/RadioGroupRadix.tsx"
+import { Option, RadioGroupRadix } from "./components/RadioGroupRadix/RadioGroupRadix.tsx"
+import { SelectRadix } from "./components/SelectRadix/SelectRadix.tsx"
 
-export type Option = {
-  value: string;
-  label: string;
-};
 
 const radioOptions: Option[] = [
   { value: "default", label: "Default" },
@@ -26,6 +23,8 @@ function App() {
         disabled={false}
       />
       <RadioGroupRadix disabled={false} options={radioOptions}/>
+
+      <SelectRadix/>
     </div>
   )
 }
