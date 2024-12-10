@@ -3,7 +3,8 @@ import { Posts } from "./components/Posts/Posts.tsx"
 import { CheckboxRadix } from "./components/CheckboxRadix/CheckboxRadix.tsx"
 import s from './App.module.css'
 import { Option, RadioGroupRadix } from "./components/RadioGroupRadix/RadioGroupRadix.tsx"
-import { SelectRadix } from "./components/SelectRadix/SelectRadix.tsx"
+import { Selects } from "./components/Selects/Selects.tsx"
+
 
 
 const radioOptions: Option[] = [
@@ -23,8 +24,7 @@ function App() {
         disabled={false}
       />
       <RadioGroupRadix disabled={false} options={radioOptions}/>
-
-      <SelectRadix/>
+      <Selects/>
     </div>
   )
 }
