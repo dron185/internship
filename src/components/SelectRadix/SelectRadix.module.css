@@ -1,5 +1,10 @@
 :root {
     --border-radius-s: 2px;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #8d9094;
+    --color-text-focus: #397df6;
+    --color-bg-primary: #0d0d0d;
+    --color-border-default: #4c4c4c;
 }
 
 .Trigger {
@@ -9,121 +14,95 @@
     border-radius: var(--border-radius-s);
     padding: 0 12px;
     height: 36px;
-    color: rgb(255, 255, 255);
+    color: var(--color-text-primary);
     font-family: Inter, serif;
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    user-select: none;
+
+    /*margin-bottom: 500px;*/
+    width: 210px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-border-default);
+    background-color: var(--color-bg-primary);
+    transition: all 0.2s ease;
 
     &:hover {
-        /*background-color: var(--mauve-3);*/
+        border: 1px solid var(--color-text-secondary);
+        border-radius: 2px;
+        color: var(--color-text-secondary);
     }
+
     &:focus {
-        /*box-shadow: 0 0 0 2px black;*/
+        outline: 2px solid var(--color-text-focus);
+        border: 1px solid transparent;
+        color: var(--color-text-secondary);
     }
+
     &[data-placeholder] {
-        color: var(--violet-9);
+        /*color: var(--violet-9);*/
+    }
+
+    &:active {
+        border-color: var(--color-text-primary);
+    }
+
+    &:disabled {
+        color: var(--color-border-default);
+        border-color: var(--color-border-default);
     }
 
     &[data-state="open"] {
         border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
+        border: 1px solid var(--color-text-primary);
+        background-color: #171717;
     }
-
-    margin-bottom: 500px;
-    width: 210px;
-    box-sizing: border-box;
-    border: 1px solid rgb(76, 76, 76);
-    background: rgb(23, 23, 23);
 }
 
 .Icon {
-    color: Var(--violet-11);
     transition: transform .2s;
 }
 
-[data-state="open"]>.Icon {
+[data-state="open"] > .Icon {
     transform: rotate(180deg);
 }
 
 .Content {
     overflow: hidden;
     width: 210px;
-    border: 1px solid rgb(255, 255, 255);
-    background: rgb(23, 23, 23);
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+    background-color: #171717;
     border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
     cursor: pointer;
-}
 
-.Viewport {
-    padding: 5px;
+    &:hover {
+        color: var(--color-text-secondary);
+    }
 }
 
 .Item {
-    font-size: 13px;
-    line-height: 1;
-    color: var(--violet-11);
-    border-radius: 3px;
+    font-family: Inter, serif;
+    font-size: 16px;
+    line-height: 24px;
     display: flex;
     align-items: center;
-    height: 25px;
-    padding: 0 35px 0 25px;
-    position: relative;
+    padding: 6px 12px;
     user-select: none;
-    &[data-disabled] {
-        color: var(--mauve-8);
-        pointer-events: none;
-    }
+    transition: all 0.3s ease;
+
     &[data-highlighted] {
         outline: none;
-        background-color: var(--violet-9);
-        color: var(--violet-1);
+        background-color: #333333;
+        color: var(--color-text-focus);
     }
 }
 
 .Label {
-    color: rgb(141, 144, 148);
+    color: var(--color-text-secondary);
     font-family: Inter, serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
 }
-
-.Separator {
-    height: 1px;
-    background-color: var(--violet-6);
-    margin: 5px;
-}
-
-.ItemIndicator {
-    position: absolute;
-    left: 0;
-    width: 25px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ScrollButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    background-color: white;
-    color: var(--violet-11);
-    cursor: default;
-}
-
-
-
-/* styles.css */
-
-/*.Item[data-disabled] {*/
-/*    color: red;*/
-/*}*/
-
-/*.Group {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-
-
